@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
         run: |
           docker login --username todesdev --password ${{ secrets.TOKEN }}
           docker build . --tag ghcr.io/todesdev/distroless-healthcheck:latest
