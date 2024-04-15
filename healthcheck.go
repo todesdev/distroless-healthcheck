@@ -45,6 +45,7 @@ func main() {
 	defer resp.Body.Close()
 
 	if resp.Status == "200 OK" {
+		fmt.Println("OK")
 		os.Exit(0)
 	} else {
 		fmt.Fprintln(os.Stderr, "Error status:", resp.Status)
